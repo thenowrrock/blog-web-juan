@@ -1,0 +1,2 @@
+<*.html[[:space:]]> filter=lfs diff=lfs merge=lfs -text
+<*.rs[[:space:]]> filter=lfs diff=lfs merge=lfs -text

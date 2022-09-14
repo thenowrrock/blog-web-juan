@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Post</title>
+    <link rel="icon"  type="image/x-icon" href="https://cdn.discordapp.com/attachments/410558873951404053/1019007555344793694/yellow_s.png">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <!-- animates aos -->
+    <link href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+</head>
+<body>
+    <style>
+
+        body{
+            color: #D6C5F0;
+            background: rgb(84,34,163);
+            background: linear-gradient(90deg, rgba(84,34,163,1) 0%, rgba(140,78,233,1) 30%, rgba(132,74,223,1) 64%, rgba(61,3,119,1) 100%);    
+         }
+        .navbar {
+            background-color: #5727A3;
+        }  
+
+        .container {
+            max-width: 960px;
+        }
+          
+          /*
+           * Custom translucent site header
+           */
+          
+          .site-header {
+            background-color: rgba(0, 0, 0, .85);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            backdrop-filter: saturate(180%) blur(20px);
+          }
+          .site-header a {
+            color: #8e8e8e;
+            transition: color .15s ease-in-out;
+          }
+          .site-header a:hover {
+            color: #fff;
+            text-decoration: none;
+          }
+          
+          /*
+           * Dummy devices (replace them with your own or something else entirely!)
+           */
+          
+          .product-device {
+            position: absolute;
+            right: 10%;
+            bottom: -30%;
+            width: 300px;
+            height: 540px;
+            background-color: #333;
+            border-radius: 21px;
+            transform: rotate(30deg);
+          }
+          
+          .product-device::before {
+            position: absolute;
+            top: 10%;
+            right: 10px;
+            bottom: 10%;
+            left: 10px;
+            content: "";
+            background-color: rgba(255, 255, 255, .1);
+            border-radius: 5px;
+          }
+          
+          .product-device-2 {
+            top: -25%;
+            right: auto;
+            bottom: 0;
+            left: 5%;
+            border-radius: 5px;
+            background-color: #e5e5e5;
+          }
+          
+          /*
+           * Extra utilities
+           */
+          
+          .flex-equal > * {
+            flex: 1;
+          }
+          @media (min-width: 768px) {
+            .flex-md-equal > * {
+              flex: 1;
+            }
+          }
+
+          /*btn nav*/
+          .btn{
+            color:#000000;
+            background-color: #ffd01a;
+          }
+          
+          /* Dark mode */
+          .dark-mode {
+            color: #fff;
+            background: rgb(28,26,26);
+            background: linear-gradient(90deg, rgba(28,26,26,1) 100%, rgba(19,16,16,1) 100%); 
+          }
+          .dark-mode-navbar {
+            color: #fff;
+            background: rgb(28,26,26);
+          }
+
+          .list-group-item {
+            background-color: #5727A3;
+            color: #fff;
+
+          }
+</style>
+<!-- START of Navbar -->
+<header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="navbar">
+        <div class="container-fluid" data-aos="fade-right">
+            <a class="navbar-brand" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="#ffd01a" class="bi bi-incognito" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="m4.736 1.968-.892 3.269-.014.058C2.113 5.568 1 6.006 1 6.5 1 7.328 4.134 8 8 8s7-.672 7-1.5c0-.494-1.113-.932-2.83-1.205a1.032 1.032 0 0 0-.014-.058l-.892-3.27c-.146-.533-.698-.849-1.239-.734C9.411 1.363 8.62 1.5 8 1.5c-.62 0-1.411-.136-2.025-.267-.541-.115-1.093.2-1.239.735Zm.015 3.867a.25.25 0 0 1 .274-.224c.9.092 1.91.143 2.975.143a29.58 29.58 0 0 0 2.975-.143.25.25 0 0 1 .05.498c-.918.093-1.944.145-3.025.145s-2.107-.052-3.025-.145a.25.25 0 0 1-.224-.274ZM3.5 10h2a.5.5 0 0 1 .5.5v1a1.5 1.5 0 0 1-3 0v-1a.5.5 0 0 1 .5-.5Zm-1.5.5c0-.175.03-.344.085-.5H2a.5.5 0 0 1 0-1h3.5a1.5 1.5 0 0 1 1.488 1.312 3.5 3.5 0 0 1 2.024 0A1.5 1.5 0 0 1 10.5 9H14a.5.5 0 0 1 0 1h-.085c.055.156.085.325.085.5v1a2.5 2.5 0 0 1-5 0v-.14l-.21-.07a2.5 2.5 0 0 0-1.58 0l-.21.07v.14a2.5 2.5 0 0 1-5 0v-1Zm8.5-.5h2a.5.5 0 0 1 .5.5v1a1.5 1.5 0 0 1-3 0v-1a.5.5 0 0 1 .5-.5Z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-code-square" viewBox="0 0 16 16">
+                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                    <path d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0zm2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z"/>
+                  </svg>
+                  Incognito Blog Juan</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/service">Service</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/profile">Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/post">Posts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/contact">Contact</a>
+              </li>
+              <li class="nav-item">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Full Stack links
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">Back-end</a></li>
+                    <li><a class="dropdown-item" href="#">Front-end</a></li>
+                    <li><a class="dropdown-item" href="#">Data-bases</a></li>
+                  </ul>
+                </li>
+              </li>
+            </ul>
+
+            <div data-aos="fade-up-left">
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-dark" type="submit">Search</button>
+                  <button class="btn btn-outline-dark" type="button" onclick="darkMode()">Dark Mode</button>
+                </form>
+              </div>
+  
+          </div>
+        </div>
+      </nav>
+</header><!-- End of Navbar -->
+
+<main>
+<!-- START of layout post -->
+{% for layoutpost in layoutpost %}
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" data-aos="fade-down" style="background-image: url('https://images8.alphacoders.com/559/thumb-1920-559128.jpg');">
+      <div class="col-md-5 p-lg-5 mx-auto my-5">
+        <h1 class="display-4 fw-normal">{{layoutpost.title_layout_post}}</h1>
+        <p class="lead fw-normal">{{layoutpost.p_p_layout_post}}</p>
+        <a class="btn btn-outline-dark" href={{layoutpost.href_layout_post_1}}>{{layoutpost.title_button_layout_post_1}}</a>
+      </div>
+      <div class="product-device-1 " data-aos="fade-down">
+        <img src={{layoutpost.img_layout_post_1}}  class="img-fluid" alt="...">
+      </div>
+      <div class="product-device-1 " data-aos="fade-down">
+        <img src={{layoutpost.img_layout_post_2}}  class="img-fluid" alt="...">
+      </div>
+    </div><!-- End of layout post -->
+    {% endfor %}    
+    
+<!-- START of  post -->
+
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+      <div class="me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden" data-aos="fade-up-left" >
+        <div class="container">
+        {% for post in posts %}
+        <div class="row">
+        <div class="col">  
+          <div data-aos="flip-left"><h2 class="pb-2 border-bottom display-4 fst-italic " style="color:#D6C5F0 ;">Post</h2></div>
+            <div class="container px-4 py-5" id="custom-cards" style="background:#5727A3 ;">
+              <div class="row align-items-center g-4 py-5" data-aos="flip-down">
+                <div class="col">
+                  <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('{{post.img}}');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                      <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"><a href="/blog/{{ post.slug }}">{{ post.title }}</a></h2>
+                    </div>
+
+                  </div>
+                  <div class="list-group">
+                    <div class="list-group-item" aria-current="true">
+                      <div class="d-flex w-100 justify-content-between">
+                        <a class="mb-1" href={{ post.body | truncate(length=150) }}>GitHub:{{ post.body | truncate(length=150) }}</a>
+                        <small>{{ post.date}}</small>
+                      </div>
+                      <img src="{{post.img}}" width="60" height="60" class="rounded-circle" alt="...">
+                    </div>
+                  </div>  
+                </div>
+          </div>
+        </div>
+      </div>  
+    </div>
+          <h2 class="pb-2 border-bottom display-4 fst-italic text-primary"></h2>
+        {% endfor %}    
+    </div><!-- End of  post -->
+    <!-- FOOTER -->
+    <footer class="container">
+      <hr class="featurette-divider">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer><!--END FOOTER --> 
+  </main>
+  <!-- Mas Bootstrap -->
+	<script src="https://getbootstrap.com/docs/5.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <!-- animates aos -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      easing: 'ease-in-out-sine',
+      duration: 1700
+    });
+  </script>
+  <!-- End animates aos -->
+
+  <!--dark morde-->
+  <script>
+    function darkMode() {
+      setDarkMode();
+      setDarkModeNavBar();
+    }
+    function setDarkMode() {
+      var body = document.body;
+      body.classList.toggle("dark-mode");
+    }
+   function setDarkModeNavBar() {
+      var navbar = document.getElementById("navbar");
+      navbar.classList.toggle("dark-mode-navbar");
+    }
+  </script>
+  <!--End dark morde-->
+</body>
+</html>
+
+
+
+ 

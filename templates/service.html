@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Service</title>
+    <link rel="icon"  type="image/x-icon" href="https://cdn.discordapp.com/attachments/410558873951404053/1019007555344793694/yellow_s.png">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <!-- animates aos -->
+    <link href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+</head>
+<body>
+    <style>
+      /*NAVBAR*/
+        .navbar {
+          background-color: #5727A3;
+        }        
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        body {
+          min-height: 75rem;
+          padding-top: 4.5rem;
+          color: #D6C5F0;
+          background: rgb(84,34,163);
+          background: linear-gradient(90deg, rgba(84,34,163,1) 0%, rgba(140,78,233,1) 30%, rgba(132,74,223,1) 64%, rgba(61,3,119,1) 100%); 
+        }
+        
+        /* Featurettes
+        ------------------------- */
+        
+        .featurette-divider {
+          margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+        }
+        
+        /* Thin out the marketing headings */
+        .featurette-heading {
+          font-weight: 300;
+          line-height: 1;
+          /* rtl:remove */
+          letter-spacing: -.05rem;
+        }
+
+
+
+        /* MARKETING CONTENT
+        -------------------------------------------------- */
+        
+        /* Center align the text within the three columns below the carousel */
+        .marketing .col-lg-4 {
+          margin-bottom: 1.5rem;
+          text-align: center;
+        }
+        .marketing h2 {
+          font-weight: 400;
+        }
+        /* rtl:begin:ignore */
+        .marketing .col-lg-4 p {
+          margin-right: .75rem;
+          margin-left: .75rem;
+        }
+        /* rtl:end:ignore */
+
+        .list-group-item{
+          background: #5727A3;
+          color: #D6C5F0;
+          font-size: 1.5rem;
+        }
+
+        .fs-4{
+          margin:1rem;
+        }
+
+
+        /*Buttons */
+        .btn btn-secondary{
+          color:#000000;
+          background-color: #ffd01a;
+        }
+
+        .btn{
+          color:#000000;
+          background-color: #ffd01a;
+        }
+
+        .text{
+          color:#1B0044 ;
+        }
+
+        /* Dark mode */
+        .dark-mode {
+          color: #fff;
+          background: rgb(28,26,26);
+          background: linear-gradient(90deg, rgba(28,26,26,1) 100%, rgba(19,16,16,1) 100%); 
+        }
+        .dark-mode-navbar {
+          color: #fff;
+          background: rgb(28,26,26);
+        }
+</style>
+<!-- START NAVBAR-->
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="navbar">
+        <div class="container-fluid" data-aos="fade-right">
+          <a class="navbar-brand" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="#ffd01a" class="bi bi-incognito" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="m4.736 1.968-.892 3.269-.014.058C2.113 5.568 1 6.006 1 6.5 1 7.328 4.134 8 8 8s7-.672 7-1.5c0-.494-1.113-.932-2.83-1.205a1.032 1.032 0 0 0-.014-.058l-.892-3.27c-.146-.533-.698-.849-1.239-.734C9.411 1.363 8.62 1.5 8 1.5c-.62 0-1.411-.136-2.025-.267-.541-.115-1.093.2-1.239.735Zm.015 3.867a.25.25 0 0 1 .274-.224c.9.092 1.91.143 2.975.143a29.58 29.58 0 0 0 2.975-.143.25.25 0 0 1 .05.498c-.918.093-1.944.145-3.025.145s-2.107-.052-3.025-.145a.25.25 0 0 1-.224-.274ZM3.5 10h2a.5.5 0 0 1 .5.5v1a1.5 1.5 0 0 1-3 0v-1a.5.5 0 0 1 .5-.5Zm-1.5.5c0-.175.03-.344.085-.5H2a.5.5 0 0 1 0-1h3.5a1.5 1.5 0 0 1 1.488 1.312 3.5 3.5 0 0 1 2.024 0A1.5 1.5 0 0 1 10.5 9H14a.5.5 0 0 1 0 1h-.085c.055.156.085.325.085.5v1a2.5 2.5 0 0 1-5 0v-.14l-.21-.07a2.5 2.5 0 0 0-1.58 0l-.21.07v.14a2.5 2.5 0 0 1-5 0v-1Zm8.5-.5h2a.5.5 0 0 1 .5.5v1a1.5 1.5 0 0 1-3 0v-1a.5.5 0 0 1 .5-.5Z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-code-square" viewBox="0 0 16 16">
+              <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+              <path d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0zm2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z"/>
+            </svg>Incognito Blog Juan</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+         <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/service">Service</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/profile">Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/post">Posts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/contact">Contact</a>
+              </li>
+              <li class="nav-item">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Full Stack links
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">Back-end</a></li>
+                    <li><a class="dropdown-item" href="#">Front-end action</a></li>
+                    <li><a class="dropdown-item" href="#">Data-bases</a></li>
+                  </ul>
+                </li>
+              </li>
+            </ul>
+
+            <div data-aos="fade-up-left">
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-dark" type="submit">Search</button>
+                <button class="btn btn-outline-dark" type="button" onclick="darkMode()">Dark Mode</button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </nav>
+    </header><!-- FINAL NAVBAR-->
+
+<!-- START HEADER PAG Solutions of Sowftware-->
+      <div class="container py-4" data-aos="zoom-out">
+        <header class="pb-3 mb-4 border-bottom">
+          <div data-aos="fade-down-right">
+            <a href="/" class="d-flex align-items-center  text-decoration-none ">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffffff" class="bi bi-display" viewBox="0 0 16 16">
+                <path d="M0 4s0-2 2-2h12s2 0 2 2v6s0 2-2 2h-4c0 .667.083 1.167.25 1.5H11a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1h.75c.167-.333.25-.833.25-1.5H2s-2 0-2-2V4zm1.398-.855a.758.758 0 0 0-.254.302A1.46 1.46 0 0 0 1 4.01V10c0 .325.078.502.145.602.07.105.17.188.302.254a1.464 1.464 0 0 0 .538.143L2.01 11H14c.325 0 .502-.078.602-.145a.758.758 0 0 0 .254-.302 1.464 1.464 0 0 0 .143-.538L15 9.99V4c0-.325-.078-.502-.145-.602a.757.757 0 0 0-.302-.254A1.46 1.46 0 0 0 13.99 3H2c-.325 0-.502.078-.602.145z"/>
+              </svg>
+              <span class="fs-4" style="color:#D6C5F0 ;">Solutions of Sowftware </span>
+            </a>
+          </div>
+        </header><!--END Solutions of Sowftware-->
+
+<!-- START layoutservice -->
+        {%for layoutservice in layoutservice %}
+        <div class="px-4 pt-5 my-5 text-center border-bottom" data-aos="zoom-out-right">
+          <h1 class="display-4 fw-bold">{{layoutservice.title_layout_service}}</h1>
+             <div class="col-lg-6 mx-auto">
+              <p class="lead mb-4"> {{layoutservice.p_p_layout_service}}</p>
+              <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5" data-aos="zoom-out-right">
+                <a class="btn btn-outline-dark" href={{layoutservice.href_layout_service_1}}>{{layoutservice.title_button_layout_service_1}}</a>
+                <a class="btn btn-outline-dark" href={{layoutservice.href_layout_service_2}}>{{layoutservice.title_button_layout_service_2}}</a>
+              </div>
+            </div>
+            <div class="overflow-hidden" style="max-height: 30vh;">
+              <div class="container px-5" data-aos="zoom-out-left">
+                <img src={{layoutservice.img_layout_service}} class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}<!-- END layoutservice -->
+    
+<!-- START pservice -->
+          <div class="container marketing"  data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+            {%for pservice in pservice %}
+            <hr class="featurette-divider">
+              <div data-aos="zoom-in" class="row featurette">
+                <div class="col-md-7">
+                  <h2 class="featurette-heading">{{pservice.title_p_service}} <span class="text">{{pservice.sub_title_p_service}}</span></h2>
+                  <p  class="lead"> {{pservice.p_p_service_1}}</p>
+                  <p  class="lead"> {{pservice.p_p_service_2}}</p>
+                  <p  class="lead"> {{pservice.p_p_service_3}}</p>
+                </div>
+                <div class="col-md-5">
+                  <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <text x="50%" y="50%" fill="#aaa" dy=".3em">
+                      <div data-aos="zoom-in">
+                        <img src={{pservice.img_p_service}}  class="img-thumbnail" alt="..."><rect width="100%" height="100%" fill="#eee"/>
+                      </div>
+                    </text>
+                  </svg>
+                </div>
+              </div>
+            <hr class="featurette-divider">
+            {% endfor %}
+          </div><!-- END pservice -->
+
+<!-- START service -->
+            <div class="container">
+              {% for service in services %}
+              <div class="p-5 rounded" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0"  style="color:#1B0044 ;">
+                  <div data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                    <p class="row  display-4 fst-italic " style="color:#D6C5F0 ;">PROFESSIONAL SERVICE</p>
+                  </div>
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel"  style="background:#1B0044 ;">
+                      <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                      </div>
+                      <div class="carousel-inner">
+                      <div class="carousel-item active">
+                          <img src={{ service.img_service_1 }} class="d-block w-100" alt="...">
+                          <div class="carousel-caption d-none d-md-block">
+                          </div>
+                      </div>
+                      <div class="carousel-item">
+                          <img src={{ service.img_service_2 }} class="d-block w-100" alt="...">
+                          <div class="carousel-caption d-none d-md-block">
+                          </div>
+                      </div>
+                      <div class="carousel-item">
+                          <img src={{ service.img_service_3 }} class="d-block w-100" alt="...">
+                          <div class="carousel-caption d-none d-md-block">
+                          </div>
+                      </div>
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+                    <div class="list-group list-group-flush">
+                      <li class="list-group-item">{{ service.name }}</li>
+                      <li class="list-group-item">Description Service:<p class="lead text-break">{{ service.description }}</p></li>
+                    </div>  
+              </div>
+              {%endfor%}<!-- END service -->
+
+              <!-- FOOTER -->
+              <footer class="container">
+                <hr class="featurette-divider">
+                <p class="float-end"><a href="#">Back to top</a></p>
+                <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+              </footer><!--END FOOTER -->
+          </div>  
+      </div>
+  </main>  
+  <!-- Bootstrap -->
+	<script src="https://getbootstrap.com/docs/5.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <!-- end Bootstrap -->
+  
+  <!-- animates aos -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      easing: 'ease-in-out-sine',
+      duration: 1000
+    });
+  </script>
+  <!-- end animates aos -->
+
+  <!--dark morde-->
+  <script>
+    function darkMode() {
+      setDarkMode();
+      setDarkModeNavBar();
+    }
+    function setDarkMode() {
+      var body = document.body;
+      body.classList.toggle("dark-mode");
+    }
+   function setDarkModeNavBar() {
+      var navbar = document.getElementById("navbar");
+      navbar.classList.toggle("dark-mode-navbar");
+    }
+  </script>
+  <!--end dark morde-->
+</body>
+</html>
+
+
